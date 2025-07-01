@@ -1,0 +1,585 @@
+% LaTeX resume using res.sty
+\documentstyle[fancyhead]{res} 
+
+% Use \documentstyle[fancyhead,newcent]{res} to get New Century Schoolbook
+% Postscript font; the fancyhead option is used to get 2 line header
+% Use \documentstyle[fancyhead]{res} to get default (Computer Modern) font
+\setlength{\topmargin}{-0.6in}  % Start text higher on the page 
+\setlength{\textheight}{9.3in}  % increase textheight to fit more on a page
+\addtolength{\textwidth}{-0.1in}  % increase textheight to fit more on a page
+\setlength{\headrulewidth}{0pt} % suppress line drawn by default with fancyhead
+\setlength{\headsep}{0.2in}     % space between header and text
+\setlength{\headheight}{12pt}   % make room for header
+
+\newdimen\mylinewidth 
+\setlength{\mylinewidth}{\resumewidth}
+\addtolength{\mylinewidth}{-0.4in}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+%\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \rule{\mylinewidth}{0.5pt} \\}
+\newcommand{\justline}{\hspace*{-18pt} \hrulefill \\\vspace{4pt}}
+\newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{2pt} \large{\textsc{#1}}} \vspace*{-2pt} \lineunder}
+\newcommand{\contact}[3]{
+\vspace*{-8pt}
+\begin{center}
+{\LARGE \scshape {#1}}
+\lineunder
+#2\\
+#3
+\end{center}
+\vspace*{-8pt}
+}
+
+\lhead{\hspace*{-\sectionwidth}} % force lhead all the way left
+\rhead{Page \thepage}  % put page number at right
+\cfoot{}  % the footer is empty
+\pagestyle{fancy} % set pagestyle for the document
+\begin{document} 
+\contact{Arunesh \hspace{3mm}    Mishra}
+{  Mountain View, CA 94043.}
+{(408) 505-5086 $\bullet$ aruneshm@gmail.com}
+\thispagestyle{empty} % this page does not have a header
+
+%\name{ARUNESH MISHRA}
+%\address{\\6204 44th Ave,\\
+%Riverdale, MD 20737.\\
+%Email: arunesh@cs.umd.edu\\
+%(408) 505 - 5086 (cell)\\
+%(301) 405 - 8162 (off)}
+
+
+\begin{resume}
+%\moveleft.5\sectionwidth\centerline{as a research intern for summer 2004.}  
+ 
+\header{Expertise and Highlights}
+\begin{itemize}
+\item [] Machine Learning, Deep Neural Networks, NLP/NLU applications. AI Assistants. Self-driving autonomous AI. 
+\item [] Network protocols, Systems security. Fully homomorphic encryption systems (FHE), on-device privacy and security centric AI.
+\item [] Recipient of prestigious Google's Founder award for innovation.
+\item [] 20+ patents and 20+ papers in top journals including best paper award at ACM conferences.
+\item [] Started 3 product teams at Google including p2p networking on Android/iOS, led them to a Billion+ daily users.
+\item [] Raised funding from Eric Schmidt (Google ex-CEO) for Picolo Labs.
+\end{itemize}
+
+\header{Work Experience}
+    {\bf VP of Engineering, Kynamics}\hfill{\it 2022 - date}
+    \begin{itemize}
+        \item [] {\it Optimization for on-device neural engine called Talkbox. \\}
+              Building the on-device infrastructure technology for scaling quantized and pruned speech/NLP neural
+              networks to run efficiently on smartphones/embedded boards.
+    \end{itemize}
+{\bf Founder/Principal Engineer, Picolo Labs Inc}\hfill{\it 2019 - 2022}
+    \begin{itemize}
+        \item [] {\it End-end encrypted Virtual Reality Applications}, Mountain View. \\
+              Building the infrastructure technology for supporting high quality end-end encrypted
+              applications in the VR space.
+    \end{itemize}
+
+    {\bf Industry Expert Consultant}\hfill{\it  2017 - 2021 }
+    \begin{itemize}
+        \item [] {\it Advisor, Mentor and Research Scientist}, Z-Park Innovation Center, Santa Clara. \\
+            Advising startups on Federated Learning technologies. Worked with 4 different startups on neural network design,
+            implementation and data privacy/security considerations.
+        \item [] {\it Advisor}, Blockchain Startups. \\ 
+            Designing the Latitude protocol, blockchain and core
+            whitepaper. Latitude is a blockchain that fundamentally shifts how data is shared in the Transportation
+            Industry (Mapping, Telematics, Insurance).
+        \item [] {\it Research projects.} \\
+            Designed and implemented an app (30K daily active users, 4.4 rating) that fixes system problems on mobile
+            phones using crowdsourced learning (deep learning). Worked on {\em Safely} -- an deep learning-based app for user safety vigilance
+            and secure/safe contact tracing (Zero Interaction Authentication protocol).
+    \end{itemize}
+    {\bf Team Lead, Senior Research Engineer, Google} \hfill{Jan 2013 - 2017}
+    \begin{itemize}
+        \item[] {\it Next-generation network stack, machine learning on device sensors.}\\
+
+             Launched a network stack for peer-peer gaming on iOS and Android via Google Play Games SDK. Designed and
+             implemented the network stack that maintains performance under changing network conditions and NAT
+             topologies. Worked with the CEO of VectorUnit for RipTide demo at Google I/O to showcase the platform.
+             Launched an API called Google Nearby that can transmit small amount of data securely over near-ultrasound
+             for mobile phones. This can be used to authenticate people in same physical room and securely measure physical distance
+             between phones to under 1 inch accuracy.
+             Formed a team under Marissa Mayer (Yahoo CEO) to build an Android app that can automatically determine if two people
+             are in the same physical room.
+             Products are now used by over 2 Billion users every day.
+             \textit{Won Google \textbf{Founders Innovation Award} for this project.}
+    \end{itemize}
+
+    {\bf Senior Research Engineer, Google}\hfill{\it Jan 2008 - Feb 2013}
+    \begin{itemize}
+        \item[] {\it Crowd-sourced location system using Wifi sensors for 2 Billion users.}\\
+
+             Designed a purely crowdsourced-data based scalable system that computes user location using Wifi and Cellular base
+             stations. System self-learns from Android users with a GPS fix to push location to indoor-users using
+             statistical and randomized signal propagation algorithms. 
+	 Conducted research in the area of software defined radios and
+	 their application to urban environments for sensing mobile users and
+	 traffic. Built cellular remap detection and localization technology, which
+	 powers Google's Mobile Maps software (1B+ downloads, most popular
+	 app on mobile).
+	 
+	 System is now used on Android, WinMo and Blackberry phones. Also works on browsers using HTML 5 Geolocation API, such
+	 as on Mozilla's Firefox and Chrome browser, also launched with Google's Toolbar for Microsoft's Internet Explorer.
+            Algorithms serves over 3 Billion location computations per day on Android and powers Google's mobile Ads
+            business unit. The success of the Wifi project helped grow the team to 70 Engineers (from 3).
+
+    \end{itemize}
+
+    {\bf Postdoc Research Scientist, Univ of Wisconsin, Madison} \hfill{\it Dec 2005 - Oct 2007},\\
+          \begin{itemize}
+              \item []{\it Led research on high-performance Wireless Network protocols and security.}\\
+              \item []$\bullet$ Designed an energy efficient VoIP over WiFi stack that
+		enhances battery lifetime for wireless phones by a factor of 3.
+		The new protocol stack uses innovative networking and systems
+		concepts designed during the course of this research and have
+		wider applicability. Filed three patents capturing the
+		innovations in the field.\\
+    \item []$\bullet$ Worked on the problem of channel management (continued work from Maryland), published
+		results at Sigmetrics and Mobicom. Initiated work on new ideas for WLAN architectures, collision detection and software-defined radios.\\
+    \item []$\bullet$ Managed a team of seven undergrad and graduate students working on a multitude of different research
+projects  in the areas of WiFi, software-defined radios, city-wide mesh
+networks and wireless emulation systems. Conducted world-class research and
+published at top tier conferences and journals. Supervised research is being
+pursued by current graduate students towards their PhD dissertations. Participated in activities
+leading to the procurement of funding from government and private companies. Continue to collaborate and guide the
+students till date. This research has won 3 best research awards at the ACM competitions over successive years.
+       %\end{itemize}
+%. Projects include channel management and power control in 802.11, research-level applications of the GNU radio, design 
+%and implementation of inbuilding infrastructure and mesh testbeds, design of a monitoring system for a city-wide mesh
+%network in Madison and realization of a scalable wireless network emulator system.
+    \end{itemize}
+
+  {\bf Other Research Collaborations.} 
+    \begin{itemize}
+         \item[] {\it Wireless Handoff Research},  NTT DoCoMo Research Labs, San Jose, CA.\\
+		 Worked on developing a Layer 2.5 protocol that enabled a user's wireless connection to be
+                 multiplexed over multiple wireless interfaces for bandwidth and QoS gains. Designed the system to be visible to the applications as a single
+                 network interface that managed the underlying wireless interfaces based on policy or performance parameters. Built a Linux kernel based
+                 implementation as a part of this study.
+
+         \item[] {\it Mesh Networking Protocol Research}, Fujitsu Labs of America, College Park, MD.\\
+		Worked on the design and implementation of one of the first wireless mesh network projects, called the {\em SNOWNET}.
+	        The implementation showed the need for dynamic routing, authentication and privacy protocols. Implemented modifications to the IEEE 802.1X Standard
+                to support an inductive authentication method for securing the mesh nodes. This work was patented 7,634,230 and Fujitsu is promoting this project's
+                protocols and ideas into the IEEE 802.11s Working Group.
+		
+         \item[] {\it Internet-based Auction Algorithm Research},  IBM India Research Labs, New Delhi.\\
+		Worked on designing an internet based auction system that used a {\em push} based mechanism to
+                coordinate bidding among competing buyers. Built a full-fledged web based implementation using a database as the
+                backend. Also constructed a graph theoretic model and developed bidding algorithms that
+                acted as agents on part of users to optimize certain
+		objectives. Received a research project award and published results in a reputed conference in India.
+    \end{itemize}
+
+\header{Education}
+{\bf Ph.D., Computer Science},
+    \begin{itemize}
+         \item[] Advisor: Dr. William Arbaugh, \\
+		 Thesis: {\em Supporting Secure and Transparent Mobility in Wireless LANs} \\
+                 University of Maryland, December 2005.
+    \end{itemize}
+
+{\bf M.S., Computer Science},   	
+    \begin{itemize}
+         \item[] University of Maryland, August 2003.
+    \end{itemize}
+
+{\bf B.Tech., Computer Science (President Gold Medalist)},
+    \begin{itemize}
+          \item[] Indian Institute of Technology, August 2000.
+    \end{itemize}
+
+
+\header{Patents}\vspace{-0.7cm}
+
+{\bf Issued:}
+    \begin{itemize}
+       \item [] [9,380,424] Crowdsourced signal propagation model.
+       \item [] [9,377,523] Determining wireless access point locations using clustered data points.
+       \item [] [9,355,387] System and method for event management and information sharing.
+       \item [] [9,098,589] Geographic annotation of electronic resources.
+       \item [] [8,989,101] Systems, methods, and computer-readable media for identifying virtual access points of
+           wireless networks.
+       \item [] [8,977,265] Method for performing handoff in wireless network.
+       \item [] [8,954,094] Mobile device functions based on transportation mode transitions.
+       \item [] [8,914,483] System and method for event management and information sharing.
+       \item [] [8,868,762] Efficient proximity detection.
+       \item [] [8,838,103] Method for performing handoff in wireless network.
+       \item [] [8,837,360] Determining geographic location of network hosts.
+       \item [] [8,830,909] Methods and systems to determine user relationships, events and spaces using wireless
+           fingerprints.
+       \item [] [8,825,078] Probabilistic estimation of location based on wireless signal strength.
+       \item [] [8,719,426] Efficient proximity detection.
+       \item [] [8,706,142] Probabilistic estimation of location based on wireless signal strength and platform
+           profiles.
+       \item [] [8,688,041] Methods and apparatus for secure, portable, wireless and multi-hop data networking.
+       \item [] [8,498,592] Method and apparatus for improving energy efficiency of mobile devices through energy
+           profiling based rate adaptation.
+       \item [] [8,478,280] Minimum coverage area of wireless base station determination.
+       \item [] [8,229,442] Derivation of minimum coverage of cellular sectors with cellular-site spatial density and
+           application specific data.
+       \item [] [8,218,493] System and method for interference mitigation in wireless networks.
+       \item [] [8,150,367] System and method of determining a location based on location of detected signals.
+       \item [] [8,085,719] System and method for achieving wireless communications with enhanced usage of spectrum
+           through efficient use of overlapping channels.
+       \item [] [8,064,921] Method and system for client-driven channel management in wireless communication networks.
+       \item [] [8,005,114] Method and apparatus to vary the transmission bit rate within individual wireless packets
+           through multi-rate packetization.
+       \item [] [7,929,948] Method for fast roaming in a wireless network.
+       \item [] [7,881,667] Methods and apparatus for secure, portable, wireless and multi-hop data networking.
+       \item [] [7,421,268] Method for fast roaming in a wireless network.
+       \item [] [7,400,604] Probing method for fast handoff in WLAN.
+       \item [] [7,263,357] Method for fast roaming in a wireless network.
+     \end{itemize}
+
+{\bf 22 Patents Pending.}
+
+\newcommand{\mybullet}{\noindent$\circ$~~}
+\header{Journal Publications}\vspace{-0.7cm}
+
+\mybullet ``Minimizing broadcast latency and redundancy in ad hoc networks'', Rajiv Gandhi, Arunesh Mishra, Srinivasan Parthasarathy, in
+{\em ACM Trans. on Networking}, 2008.
+
+\mybullet ``Deconstructing wireless errors: collision or 'bad' channel?'', Shravan  Rayanchu, Dheeraj Agrawal, Sharad Saha, Arunesh Mishra, Suman Banerjee,
+at {\em ACM Mobicom Mobile Computing and Communications Review}, 2008.
+
+\mybullet ``Wireless Security and Interworking'', Minho Shin, Justin Ma, Arunesh Mishra and William Arbaugh in IEEE Cryptography and Security, 2005.
+
+\mybullet ``Weighted coloring based channel assignment in WLANs'', Arunesh Mishra, Suman Banerjee and William Arbaugh,
+in {\em ACM Mobicom Mobile Computing and Communications Review}, July, 2005.
+
+\mybullet ``Security issues in IEEE 802.11 WLANs: A survey'', Arunesh Mishra, Nick L. Petroni Jr. William Arbaugh and Timothy Fraser, 
+in {\em  Wiley Interscience Wireless Communications and Mobile Computing Journal }, Vol 4 No 8, December, 2004.
+
+\mybullet ``Proactive key distribution using Neighbor Graphs'', Arunesh Mishra,  Min-ho Shin and William A. Arbaugh,
+{\em in IEEE Wireless Communications, February,} 2004.
+
+\mybullet ``An empirical analysis of the IEEE 802.11 MAC layer handoff process'', Arunesh Mishra,  
+Min-ho Shin and William A. Arbaugh, {\em in the ACM SIGCOMM Computer Communication Review, April} 2003. 
+
+\header{Conference Publications}\vspace{-0.7cm}
+
+\mybullet ``CENTAUR: Realizing the Full Potential of Centralized WLANs through a Hybrid Data Path.'', Vivek Shrivastava, Nabeel Ahmed, Shravan Rayanchu, Suman Banerjee, Srinivasan Keshav, Konstantina Papagiannaki, Arunesh Mishra,
+in {\it ACM Mobicom}, Beijing, September, 2009. {\bf Best Paper Award.}
+
+\mybullet ``Supporting Continuous Mobility through Multi-rate Wireless Packetization.'', Arunesh Mishra, Shravan Rayanchu, Dheeraj Agrawal, Suman Banerjee, 
+in {\it ACM HotMobile}, Napa Valley, CA, February 2008.
+
+\mybullet ``Diagnosing wireless packet losses in 802.11: Separating collision from weak signal'', Sharavan Rayanchu, Arunesh Mishra, Dheeraj Agrawal, Sharad Saha,
+Suman Banerjee, in {\it IEEE Infocom}, Phoenix, AZ, 2008.
+
+\mybullet ``Understanding the limitations of transmit power control for indoor WLANs'',Vivek Shrivastava, Dheeraj Agrawal, Arunesh Mishra, Suman Banerjee, Tamer Nadeem, in {\it ACM Internet Measurement Conference}, San Diego, CA, 2007.
+
+\mybullet ``Interference mitigation in WLANs with speculative scheduling'', Nabeel Ahmed, Vivek Shrivastava, Arunesh Mishra,
+   Suman Banerjee, Srinivasan Keshav, Dina Papagiannaki, in  {\it ACM Mobicom}, Montreal, Canada, 2007.
+
+\mybullet ``Deconstructing Wireless Errors : Collision or 'Bad' Channel? '', Shravan Rayanchu, Arunesh Mishra, Dheeraj Agrawal, Sharad Saha, Suman Banerjee,
+in {\it ACM Mobicom}, Montreal, Canada, 2007. Won the first prize in the {ACM Student Research Competition}.
+
+\mybullet ``On the (In)feasibility of Fine Grained Power Control'', Vivek Shrivastava, Dheeraj Agrawal, Arunesh Mishra, Suman Banerjee, and Tamer Nadeem,
+at the {\it ACM Mobicom,  September 2006}, won the first prize in an {ACM Student Research Competition}.
+
+\mybullet ``Distributed channel management in uncoordinated wireless environments'', Arunesh Mishra, Vivek Shrivastava,
+Dheeraj Agrawal, Suman Banerjee, in {\em ACM Mobicom}, 2006.
+
+\mybullet ``Partially overlapped channels not considered harmful'', Arunesh Mishra, Vivek Shrivastava, Suman Banerjee, William
+Arbaugh, in {\em ACM Sigmetrics}, 2006.
+
+\mybullet ``Client-driven channel management in wireless LANs'', Arunesh Mishra, Vladimir Brik, Suman Banerjee, Aravind
+Srinivasan, William Arbaugh, in {\em IEEE Infocom}, 2006.
+
+\mybullet ``Exploiting partially overlapping channels in wireless networks: Turning a peril into an advantage'',
+Arunesh Mishra, Eric Rozner, Suman Banerjee, William Arbaugh, in  {\em  ACM/USENIX Internet Measurement Conference}, 2005.
+
+\mybullet ``Eliminating handoff latencies in 802.11 WLANs using multiple radios: Applications, experience, and evaluation'', 
+Vladimir Brik, Arunesh Mishra, Suman Banerjee, in {\em ACM/USENIX Internet Measurement Conference}, 2005.
+
+\mybullet ``Improving the latency of 802.11 hand-offs using Neighbor Graphs'',
+Min-ho Shin, Arunesh Mishra, William Arbaugh, in {\em ACM Mobisys},  2004.
+
+\mybullet ``Context caching using Neighbor Graphs for fast handoffs in a wireless network'', Arunesh Mishra, 
+Min-ho Shin, William Arbaugh, in {\em  IEEE Infocom}, 2004.
+
+\mybullet ``Minimizing broadcast latency and redundancy in ad-hoc networks'', Rajiv Gandhi, Srinivasan Parthasarathy, 
+Arunesh Mishra, in {\em ACM Mobihoc}, 2003.
+
+\mybullet ``Winner determination in combinatorial auctions with restriction on bidding patterns'', Arunesh Mishra, 
+K. Balaji, in {\em ICIT }, Bhuwaneshwar, India, 1999.
+
+\header{Workshops and Contributions to IEEE Standards }\vspace{-0.7cm}
+
+\mybullet ``Towards secure localization using wireless `Congruity' '', Arunesh Mishra, Shravan Rayanchu, Ashutosh Shukla, Suman Banerjee
+at the {\it IEEE HotMobile Workshop}, Tucson, AZ, 2007.
+
+\mybullet ``TRAC: An Architecture for Real-Time Dissemination of Vehicular Traffic Information'',
+Shravan Rayanchu, Sulabh Agarwal, Arunesh Mishra, Suman Banerjee, Samrat Ganguly,  in {\it ACM Mobicom}, Los Angeles CA, 2006.
+
+\mybullet ``Using partially overlapped channels in wireless meshes'', Arunesh Mishra, Suman Banerjee and William Arbaugh,
+as an {\em invited paper} at the {\em First IEEE Workshop on Wireless Mesh Networks}, in conjunction with IEEE SECON,
+Santa Clara, September 2005.
+
+\mybullet ``Client-driven channel management in wireless LANs'', Arunesh Mishra, Vladimir Brik, Suman Banerjee, Aravind Srinivasan
+and William Arbaugh, as a student poster at  the {\em ACM Mobicom}, Cologne, Germany, September 2005.
+
+\mybullet ``Inclusion of optimal-channel time into IEEE 802.11k'', Arunesh Mishra,  Min-ho Shin, William Arbaugh and Insun Lee,
+at the {\em IEEE 802.11 Working Group Meeting, San Francisco, Document IEEE 802.11-03/541 K, July 2003}.
+
+\mybullet ``Fast handoffs using fixed channel probing'' Arunesh Mishra, Min-ho Shin, William Arbaugh and Insun Lee, at the 
+{\em IEEE 802.11 Working Group Meeting, San Francisco, Document IEEE 802.11-03/540 K, July 2003}.
+
+\mybullet ``Secure-spaces: Location-based secure group communication for wireless networks'', Arunesh Mishra and 
+Suman Banerjee, {\em in the ACM MOBICOM Mobile Computing and Communications Review (MC2R)}, Vol. 1, No. 2, October 2002.
+Also appears as a student poster in {\em ACM Mobicom}, September 2002.
+
+
+\mybullet ``An initial security analysis of the IEEE 802.1X Standard'', Arunesh Mishra and William A. Arbaugh,
+{\em Technical Report, University of Maryland, Department of Computer Science CS-TR-4328, 
+UMIACS-TR-2002-10}, Feburary 2001, cited on {\em CNN} - Feb 18 2001. Over {\em 300,000} downloads.
+
+
+\mybullet ``Opensource implementation of the IEEE 802.1X Standard'', Arunesh Mishra and William A. Arbaugh,
+{\em Work-In-Progress Talk at the Tenth USENIX Security Symposium, August 2001}.
+
+
+\mybullet ``The co-processor as an independent auditor'', Arunesh Mishra and Jesus Molina and William A. Arbaugh,
+{\em WiP at the IEEE Symposium on Security and Privacy, Oakland, CA, 2001}.
+
+
+\header{Research at Univ of Wisconsin, Madison\hfill \textsc{(2005 -- 2007)}}
+{\bf Multi-experiment functionality for the ORBIT testbed}
+    \begin{itemize}
+	\item [] Orbit is an NSF collaborative project focused on the creation of a large-scale wireless network testbed
+to allow researchers worldwide to execute  multiple wireless experiments in a
+confined and controlled  physical environment.  Funded by NSF, the goal of our
+project was to facilitate the execution of multiple wireless experiments
+through temporal partitioning of the resources between experiments. Supervised two
+undergraduate students through the design and implementation of this system
+which was incorporated into ORBIT.
+    \end{itemize}
+\vspace{-0.2cm}
+{\bf Analysis of the performance of a city-wide mesh network. }
+    \begin{itemize}
+	\item [] This project was in collaboration with a local company, {\it MadCity
+ Broadband}, which has deployed a city-wide mesh network to provide Internet access through WiFi
+for the city of Madison. Designed and built a distributed monitoring
+infrastructure to measure and analyze the performance of their mesh network.
+Worked with two graduate students and the concerned employees of the company to
+build this infrastructure and install it within the city.
+    \end{itemize}
+\vspace{-0.2cm}
+
+{\bf Stiglan: An Architecture for centralized scheduling in 802.11 wireless LANs}
+    \begin{itemize}
+	\item [] Research focusses on the idea of centrally scheduling packets
+	in an enterprise 802.11 network. The centralized scheduler maintains a
+	network-wide view of interference from other networks and users and
+	performs intelligent scheduling of transmissions at the access points
+	to minimize collisions and improve throughput. Initial version appears
+	as an extended abstract in ACM Mobicom 2007. Final system, renamed to
+	``Centaur'' won the {\em Best Paper Award} at ACM Mobicom 2009.
+    \end{itemize}
+\vspace{-0.2cm}
+
+{\bf Practical transmit power control for 802.11}
+
+\begin{itemize}
+\item [] Power control allows for reduced interference and improved battery life.
+However, in dynamic wireless conditions such as a WiFi Hotspot, transmit power
+needs to be constantly adapted to sustain these gains. Project studies dynamic
+adaptation of transmit power parameter through extensive experimentation in
+diverse environments and details guildelines for fine-grained transmit power
+control algorithms. Initial version appeared as a poster in ACM Mobicom 2006;
+full version of this work was published at the ACM Internet Measurement
+Conference, 2007.
+\end{itemize} \vspace{-0.2cm}
+
+{\bf TRAC -- An architecture for real-time traffic information dissemination}
+    \begin{itemize}
+	\item [] This research resulted in the design of TRAC -- an architecture to support dissemination of location-sensitive real-time traffic information
+specifically targeted towards highly mobile users (vehicles moving at high speeds). Project involved design and
+simulation based study of the algorithms and system-level issues involved in implementing such a system. Key innovations
+include the notion of virtual publisher and subscriber aggregation mechanisms.
+Work was published at a workshop in IEEE Infocom 2007.
+    \end{itemize}
+
+\vspace{-0.2cm}
+
+{\bf Secure localization using wireless congruity}
+    \begin{itemize}
+	\item [] This research resulted in the creation of a concept called
+	wireless congruity -- the property that two wireless nodes in vicinity of each other will
+experience similar wireless channel characteristics such as packet losses, collisions and contention. Project involves the design
+and implementation of a network-wide system based on congruity to provide secure location authentication. Initial
+version of this work appears as a paper in ACM HotMobile 2007.
+    \end{itemize}
+\vspace{-0.2cm}
+
+{\bf Woice: An energy efficient protocol stack for VoIP over 802.11}
+    \begin{itemize}
+	\item [] IEEE 802.11 uses a strategy based on multiple retransmissions  to evaluate the cause of packet losses
+-- collision versus signal degradation. This evaluation has direct impact on
+bandwidth and energy resources of the communicating wireless devices. Designed
+a novel {\it voice-aware} link layer
+adapation mechanism that uses feedback from access points to `fine-tune' the
+link layer parameters while consuming significantly
+lower energy.  Filed for three patents convering the innovations.
+\end{itemize}
+\vspace{-0.2cm}
+
+{\bf Spark: An architecture for spectrum slicing in software defined radios}
+ \begin{itemize}
+ \item [] This research
+involves the design and realization of a practical spectrum management and sharing architecture that takes advantage of
+recent developments in software radio technology to allow for better spectrum utilization through fine-grained sharing.
+Innovated key architectural constructs to solve the problems of spectrum fragmentation (to improve utilization) and
+enforcing spectrum leases (security issues) through the design of a system, called {\it Spark}. Initial version appears
+as a paper in ACM HotMobile 2007.
+ \end{itemize}
+
+\header{PhD Dissertation and Related Research \hfill (2003 -- 2005)}
+{\bf Channel management in wireless LANs}
+    \begin{itemize}
+	\item [] This research addressed the joint challenge of assigning
+	radio-frequency channels to 802.11 access points (APs) and allocating
+	users among APs, called channel management. Developed a conflict-based set coloring model which allows clients to `drive' the channel assignment
+decisions made at the APs.  Built practical centralized and distributed solutions separately tailored for both enterprise and hotspot
+environments. Through carefully studied experiments, showed the ability to use partially overlapped channels in both 2.4
+and 5 GHz band. This directly improved spectrum utilization by 30\%.  Work was published at premier conferences such as
+IMC, Infocom, Mobicom and Sigmetrics.
+    \end{itemize}
+\vspace{-0.2cm}
+
+{\bf Neighbor graphs for fast handoffs in 802.11 wireless LANs}
+    \begin{itemize}
+    \item []
+  	Built practical and competitive algorithmic solutions for fast and secure 802.11 handoffs in wireless LANs.
+       Proposed solutions were studied through a 40-node inbuilding testbed based implementation. They achieved 
+       a target handoff latency of under 50 ms from about 400 ms (no security) or 1.2 seconds (802.1X security).
+	They have been incorporated into the IEEE 802.11f (mobility) and 802.11i (security) standards apart from being
+       patented by Samsung. Work was published at peer-reviewed conferences including Infocom and Mobisys.
+    \end{itemize}
+\vspace{-0.2cm}
+{\bf Open1x.org effort}
+    \begin{itemize}
+	\item [] Engineered the first and widely used opensource implementation of the IEEE 802.1X standard available at
+{\it www.open1x.org} which provides for robust wireless authentication. This has been incorporated into a number of linux
+and embedded OS distributions including Debian. Also discovered and rectified critical security flaws in this standard. 
+Work received considerable media focus, including CNN and was published as a journal paper. Suggested fixes were
+incorporated in the IEEE 802.1X-2004 version.
+    \end{itemize}
+
+
+\header{Recognition / Awards}
+{\bf Best paper award, Mobicom, 2009}
+    \begin{itemize}
+         \item[] Awarded for the paper titled, ``Centaur: Realizing the Full Potential of Centralized WLANs through a Hybrid Data Path.".
+    \end{itemize}
+
+{\bf Google Founder's Innovation Award, 2008}
+    \begin{itemize}
+         \item[] Awarded by the Company's highest level Management for innovative work in
+	 Location-based services for Mobile phones. Award was given to less than 30 Employees from a total of 10,000.
+    \end{itemize}
+
+{\bf President of India Gold Medal - 2000}
+    \begin{itemize}
+         \item[] Awarded for highest GPA among all 2000-batch undergraduate students at IIT Guwahati.
+    \end{itemize}
+
+
+{\bf Student Rank One Merit Scholarship 1997-2000}
+    \begin{itemize}
+         \item[] Indian Institute of Technology, Guwahati.
+    \end{itemize}
+
+{\bf Best Intern Award - 1999}
+    \begin{itemize}
+         \item[] Awarded for best project intern at IBM India Research Labs, New Delhi. 
+    \end{itemize}
+
+{\bf Business Plan Competition - Runners up, 2002}
+    \begin{itemize}
+         \item[] Won a runners-up award for a business plan competition at the
+	 Robert H. Smith School of Business at the University of Maryland. The
+	 business was to build a portable MP3 player with Wifi capability.
+    \end{itemize}
+
+{\bf My work directly cited in the Media}
+    \begin{itemize}
+         \item[$\bullet$] {\em Google Deducing Wireless Data}, on Slashdot and other Tech websites, Jan 29, 2010.
+         \item[$\bullet$] {\em CNN, PCWorld, ZDNet News, Slashdot},  ``Researchers claim to crack
+           wireless security'', Feburary 18, 2002.
+         \item[$\bullet$] {\em CNET Asia}, ``Wireless network security shows cracks'', Feburary 19, 2002.  
+         \item[$\bullet$] {\em BusinessWeek Online}, ``This LAN is Whose LAN?'', Feburary 21, 2002. 
+    \end{itemize}
+
+{\bf Recognition in the Professional Community}
+    \begin{itemize}
+	\item  [$\bullet$] {\em Invited as a reviewer:} Invited as an external
+	reviewer for all major conferences and journals including IEEE Infocom,
+	ACM ICNP, IEEE Globecom, IEEE WCNC, ACM Mobicom, ACM MC2R, IEEE Transactions on Mobile
+	Computing, IEEE Transactions in Networking and the Wiley Journal of Wireless Networks.
+        \item [$\bullet$] {\em Technical program committee member} for
+	conferences: The 14th International Confernce on High Performance
+	Computing (HiPC), 2007; the 14th The International Conference on
+	Advanced Computing and Communication (ADCOM), 2007; and the Fifth Annual
+	IEEE Communications Society Conference on Sensor, Mesh and Ad Hoc
+	Communications and Networks (SECON), 2008, ACM Mobicom's Mobiheld, 2009.
+     \end{itemize}
+\iffalse
+         \item[]  International Conference on Network Protocols (ICNP) 2001.
+         \item[]  IEEE Infocom 2003, 2005.
+         \item[]  IEEE Globecom 2003.
+         \item[]  IEEE Wireless Communications and Networking Conference (WCNC) 2004.
+         \item[]  Wireless Communications and Mobile Computing Journal, John Wiley and Sons.
+         \item[]  ACM MOBICOM Mobile and Computer Communications Review (MC2R).
+	 \item[]  EURASIP Journal of Wireless Communications.
+	 \item[]  IEEE Transactions on Mobile Computing.
+         \item[]  Wiley Journal on Wireless Networks.
+    \end{itemize}
+\fi
+
+%\header{References}
+%   \begin{itemize}
+%	\item[] Available upon request.
+%   \end{itemize}
+
+%   \begin{itemize}
+%	\item[] $\bullet$ Dr. Suman Banerjee, University of Wisconsin, (suman@cs.wisc.edu).
+%        \item[] $\bullet$ Dr. William Arbaugh, University of Maryland, (waa@cs.umd.edu).
+%	\item [] $\bullet$ Dr. Bobby Bhattacharjee, University of Maryland (bobby@cs.umd.edu).
+%	\item [] $\bullet$ Dr. Jonathan Agre, Fujitsu Labs of America, (jagre@fla.fujitsu.com).
+%   \end{itemize}
+\end{resume}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
