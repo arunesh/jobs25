@@ -5,3 +5,6 @@ all:
 one: 
 	pdflatex arunesh_onepage.tex
 	open arunesh_onepage.tex
+
+clean:
+	rm *.out *.aux *.log *.dvi

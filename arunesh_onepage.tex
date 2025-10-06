@@ -39,7 +39,8 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\footskip}{-0.5in}  % shift footnotes up if needed
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -69,6 +70,13 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingOneLine}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -142,35 +150,40 @@
 
 %-----------EXPERIENCE-----------
 \section{Summary}
-Hands-on engineering leader with strong background in Agentic AI, Algorithms and Distributed Systems. Looking for a leadership role in a challenging and high impact domain in systems, infrastructure and AI.
+Hands-on engineering leader and full-stack engineer looking for a leadership role in a challenging and high impact domain.
+
+\section{Skills}
+\begin{itemize}[leftmargin=3.5em, itemsep=0pt, label=\tiny$\bullet$]
+  \resumeItem {Expertise: Cloud Native Infrastructure, Distributed Systems, Networking, Machine Learning, Agentic LLM use, Fine-tuning methods, NLP/NLU applications, design of AI Assistants, On-device privacy and security centric AI, Fully homomorphic encryption systems (FHE).}
+  \resumeItem {Languages: Kotlin, Swift, Go, Rust, Java, Python, C/C++} 
+  \resumeItem {Frameworks: Android/iOS SDKs, React, Node.js, Flask, JUnit, Material-UI, FastAPI}
+  \resumeItem {Developer Tools: Git, Docker, K8s, GCP/AWS/Azure, VS Code, PyCharm, IntelliJ, Eclipse, Vibe coding tools}
+\end{itemize}
+
 \section{Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Co-founder and CTO}{June 2019 -- Present}
-      {Picolo Labs}{Mountain View, CA}
+    \resumeSubheadingOneLine
+      {Co-founder, CTO, Picolo Labs}{2019 - Present}
       \resumeItemListStart
-        \resumeItem{Talkbox Project: On-device privacy friendly AI. Build Android and iOS on-device speech-to-text, translator, and text-to-speech models fine tuned for 37 foreign languages.
-        Deployed with 2500+ operators at US Coast Guard, state and other federal agencies. Additinal features include document translation, question/answer and knowledge retrieval fully offline and on-device. Built custom fine-tuning pipeline and achieved SoTA on accuracy. Some opensourced https://huggingface.co/arun100}
-        \resumeItem{Wave Project: Scalable end-end encrypted Virtual Reality and Video conferencing system. Funded by NSF through a highly competitive process. Launched with 250+ customers during the Covid lockdowns.}
+        \resumeItem{Talkbox Project: On-device privacy friendly system for Tranformer model accleeration on Android and iOS. Deployed speech-to-text, translator, and text-to-speech models fine tuned for 37 foreign languages with 2500+ operators at US Coast Guard, US Army(xtech), state and federal teams. Additinal features include document translation, question/answer and knowledge retrieval fully offline and on-device. Built custom fine-tuning pipeline and achieved SoTA on accuracy. Some opensourced https://huggingface.co/arun100 }
+        \resumeItem{Wave Project: Scalable end-end encrypted Virtual Reality and Video conferencing system. Funded by NSF through a highly competitive process. Launched with 250+ Edu.tech and federal customers during the Covid lockdowns.}
         \resumeItem{Privacy friendly federated learning using Fully-Homomorphic encryption algorithms. Build Android/iOS infrastructure to jointly fine-tune models without a central cloud. Private beta launched with Gov customers.}
-        \resumeItem{Semi-finalist at Dept of Defense Darpa AI Challenge}{Picolo Labs was awarded semi-finalist at an AI Challenge for finding software vulnerabilities using Fuzzing and LLMs. Build a competitive solution that can identify CVEs in C/C++ and Java code automatically with a high success rate.}
+        \resumeItem{Semi-finalist at Dept of Defense Darpa AI Challenge: Picolo Labs was awarded semi-finalist at an AI Challenge for finding software vulnerabilities using Fuzzing and LLMs. Build a competitive solution that can identify CVEs in C/C++ and Java code automatically with a high success rate.}
         \resumeItem{Raised seed round from Menlo Ventures, Village Global (Eric Schmidt)}
         \resumeItem{Awarded Research grant by the National Science Foundation (NSF), matched by state government awards.}
       \resumeItemListEnd
       
-    \resumeSubheading
-      {Co-founder and CTO}{2017 -- 2019}
-      {Incept AI}{San Mateo, CA}
+    \resumeSubheadingOneLine
+      {Co-founder, CTO, Incept AI}{2017 - 2019}
       \resumeItemListStart
-        \resumeItem{Chat-based AI assistant on Android to automatically take actions on the user's behalf}
+        \resumeItem{Chat-based AI assistant on Android to automatically take actions on the user's behalf.}
         \resumeItem{Engineered a knowledge base for the AI assistant consisting of mobile app screens, action traces and user intents}
         \resumeItem{Launched and grew the app to a total of 100K+ users}
-    \resumeItemListEnd
+      \resumeItemListEnd
 
-    \resumeSubheading
-      {Tech Lead, Senior Software Engineer}{Jan 2013 -- Feb 2017}
-      {Google Inc}{Mountain View, CA}
+    \resumeSubheadingOneLine
+      {Tech Lead, Senior Software Engineer, Google Inc}{2008-2017}
       \resumeItemListStart
         \resumeItem{Launched a network stack for peer-peer gaming on iOS and Android via Google Play Games SDK. Designed and implemented the network stack that maintains performance under changing network conditions and NAT topologies. Worked with the CEO of VectorUnit for RipTide
         demo at Google I/O to showcase the platform.}
@@ -180,9 +193,6 @@ Hands-on engineering leader with strong background in Agentic AI, Algorithms and
         \resumeItem{Formed a team under Marissa Mayer to build an Android app that can automatically determine if two people are in the same physical room.}
       \resumeItemListEnd
 
-    \resumeSubheading
-      {Software Engineer, L4}{2008 -- 2013}
-      {Google Inc}{Mountain View, CA}
       \resumeItemListStart
         \resumeItem{Launcehd Wifi-based location services for 3+ Billion users on Android and Chrome from inception. Build Wifi-RF based location clustering algorithms, traffic prediction and business occupancy prediction algorithms.}
         \resumeItem{Designed and implemented a distributed system to compute user location using Wifi and Cellular base stations. System self-learns from Android users with a GPS fix to push location to indoor-users using statistical and randomized signal propagation algorithms.}
@@ -193,48 +203,25 @@ Hands-on engineering leader with strong background in Agentic AI, Algorithms and
 
   \resumeSubHeadingListEnd
 
-\section{Awards and Highlights}
-%  \resumeSubHeadingListStart
-\begin{itemize}
-  \item[]{\vspace{-2pt}}
-    \resumeItemListStart
-     \resumeItem {Experience in Machine Learning, Agentic LLM use, Fine-tuning methods, NLP/NLU applications, design of AI Assistants, On-device privacy and security centric AI, Network protocols, Systems security, Fully homomorphic encryption systems (FHE).}
+\section{Notable Achievements}
+% Note: We need leftmargin to be 3.5em to align with the bullet points in the previous sections
+% Also the label is set to \tiny$\bullet$ to match the bullet points in the previous sections
+    \begin{itemize}[leftmargin=3.5em, itemsep=0pt, label=\tiny$\bullet$]
      \resumeItem {Recipient of prestigious Google’s Founder award for innovation. Presidents Gold Medal at IIT.}
      \resumeItem {52 awarded patents on algorithms, security, networking, machine learning and distributed systems. Best paper award at top ACM conferences.}
      \resumeItem {From 0 to 1: Started 3 product teams at Google including p2p networking on Android/iOS, Google Play Games and led them to a Billion+ daily users.}
-     \resumeItem {Raised funding from Eric Schmidt (Google ex-CEO) for Picolo Labs. Awarded NSF Research Grant for startup innovation.}
-   \resumeItemListEnd
-\end{itemize}
-%  \resumeSubHeadingListEnd
+     \resumeItem {NSF Research Grant for startup innovation. Best paper at ACM Mobicom, Infocom, MobiSys.}
+     \resumeItem {Creator of opensource implementation of IEEE 802.1X standard available at www.open1x.org. Distributed as part of all major linux distributions today.}
+     \resumeItem {Found vulnerabilities in IEEE 802.1X standard and proposed fixes that were incorporated into the standard. Paper downloaded 2 million+ times till date. Google Scholar h-index of 62}
+   \end{itemize}
 
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Kotlin, Swift, Go, Rust, Java, Python, C/C++} \\
-     \textbf{Frameworks}{: Android/iOS SDKs, React, Node.js, Flask, JUnit, Material-UI, FastAPI} \\
-     \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse, Vibe coding tools} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
-    }}
- \end{itemize}
 
 %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheadingItem
-      {Ph.D. Systems Security, M.S. in Computer Security}{University of Maryland, College Park}
-    \resumeSubheadingItem
-      {B.Tech, IIT}{Guwahati, India}
-  \resumeSubHeadingListEnd
+  \begin{itemize}
+    \item[] \textit{\small Ph.D. Systems Security, M.S. in Computer Security.}\hspace{2pt}{\small University of Maryland, College Park \vspace{-0.5em}}
+    \item[] \textit{\small B.Tech, Indian Institute of Technology.}\hspace{2pt}{\small Guwahati, India}
+  \end{itemize}
 
 \end{document}
-% \section{Education}
-%  \resumeSubHeadingListStart
-%    %\resumeSubheading
-%    \resumeSubheadingItem
-%      {Ph.D. Systems Security, M.S. in Computer Security}{University of Maryland, College Park}Advisor: Dr. William Arbaugh}
-%    \resumeSubheading
-%      {Indian Institute of Technology}{Guwahati, India}
-%      {Bachelor of Technology}{Awarded President's Gold Medal}
-%  \resumeSubHeadingListEnd
-%
-%     {University of Maryland}{College Park, MD}
+
