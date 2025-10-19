@@ -1,0 +1,225 @@
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+\newdimen\resumewidth
+
+\resumewidth=6.5in
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\footskip}{-0.5in}  % shift footnotes up if needed
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingOneLine}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubheadingItem}[1]{
+   \item\textit{\small{
+       {#1 \vspace{-2pt}}}
+  }
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \rule{\mylinewidth}{0.5pt} \\}
+
+\newdimen\mylinewidth 
+\setlength{\mylinewidth}{\resumewidth}
+\addtolength{\mylinewidth}{-0.4in}
+\newcommand{\contact}[3]{
+\vspace*{-8pt}
+\begin{center}
+{\LARGE \scshape {#1}}
+\lineunder
+#2\\
+#3
+\end{center}
+\vspace*{-8pt}
+}
+
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\LARGE \scshape Arunesh \hspace{3mm} Mishra} \\ \vspace{1pt}
+    %\textbf{\Huge \scshape Arunesh Mishra} \\ \vspace{1pt}
+    %\small 650-732-7700 $|$ \href{mailto:aruneshm@gmail.com}{\underline{aruneshm@gmail.com}} $|$ 
+    \footnotesize{\href{mailto:aruneshm@gmail.com}{\underline{aruneshm@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/aruneshm}} $|$
+    %\href{https://github.com/...}{\underline{github.com/arunesh}}
+    \href{https://arunesh.github.io}{\underline{arunesh.github.io}}}
+\end{center}
+
+
+
+%-----------EXPERIENCE-----------
+\section{Summary}
+Applied AI Engineer and Technical Leader with 10+ years of experience building production-grade machine learning systems and 4+ years leading development of agentic AI applications. Expert in LLM orchestration, multi-agent frameworks, RAG pipelines, and tool-augmented reasoning. Proven track record in shipping applied AI features to millions of users, defining technical strategy for autonomous AI systems, and mentoring teams of engineers and scientists to deliver business impact at scale.
+
+\section{Skills}
+\begin{itemize}[leftmargin=3.5em, itemsep=0pt, label=\tiny$\bullet$]
+  \resumeItem {Agentic AI and LLM Systems: Agent frameworks, tool-use orchestration, planning, memory \& context management, RAG, evaluation.}
+  \resumeItem {ML \& NLP: Transformers, instruction tuning, reinforcement learning with human feedback (RLHF), multimodal models}
+  \resumeItem {Infra \& Engineering: Vector databases (Pinecone, FAISS), LangChain, LlamaIndex, Ray, Kubernetes, Docker, gRPC, REST}
+  \resumeItem {Languages: Kotlin, Swift, Go, Rust, Java, Python, C/C++} 
+  \resumeItem {Frameworks: Android/iOS SDKs, React, Node.js, Flask, JUnit, Material-UI, FastAPI}
+  \resumeItem {Developer Tools: Git, Docker, K8s, GCP/AWS/Azure, VS Code, PyCharm, IntelliJ, Eclipse, Vibe coding tools}
+\end{itemize}
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheadingOneLine
+      {Co-founder, CTO, Picolo Labs}{2019 - Present}
+      \resumeItemListStart
+        \resumeItem{Codewalk Project: Agentic coding platform that constructs a knowledge base for deep code understanding and reasoning at the architectural level.}
+        \resumeItem{VideoIndex Project: Agentic video understanding platform that allows information retrival from long videos, suitable for Question-answer style reasoning.}
+        \resumeItem{Talkbox Project: On-device privacy friendly system for Transformer model acceleration on Android and iOS. Deployed speech-to-text, translator, and text-to-speech models fine tuned for 37 foreign languages with 2500+ operators at US Coast Guard, US Army(xtech), state and federal teams. Additional features include document translation, question/answer and knowledge retrieval fully offline and on-device. Built custom fine-tuning pipeline and achieved SoTA on accuracy. Some opensourced https://huggingface.co/arun100 }
+        \resumeItem{Wave Project: Scalable end-end encrypted Virtual Reality and Video conferencing system. Funded by NSF through a highly competitive process. Launched with 250+ Edu.tech and federal customers during the Covid lockdowns.}
+        \resumeItem{Semi-finalist at the Darpa AI Challenge: Picolo Labs was awarded semi-finalist at an AI Challenge for finding software vulnerabilities using Fuzzing and LLMs. Build a competitive solution that can identify CVEs in C/C++ and Java code automatically with a high success rate.}
+        \resumeItem{Raised seed round from Menlo Ventures, Village Global (Eric Schmidt). Awarded Research grant by the National Science Foundation (NSF), matched by state government awards.}
+      \resumeItemListEnd
+      
+    \resumeSubheadingOneLine
+      {Co-founder, CTO, Incept AI}{2017 - 2019}
+      \resumeItemListStart
+        \resumeItem{Chat-based AI assistant on Android to automatically take actions on the user's behalf. Actions derived from an AI model powered by a Ontological knowledge base over user action traces and intent.}
+        \resumeItem{Launched and grew the app to a total of 100K+ users}
+      \resumeItemListEnd
+
+    \resumeSubheadingOneLine
+      {Tech Lead, Senior Software Engineer, Google Inc}{2008-2017}
+      \resumeItemListStart
+        \resumeItem{Libjingle/WebRTC on Android: Launched a network stack for peer-peer gaming on iOS and Android via Google Play Games SDK. Designed and implemented the network stack that maintains performance under changing network conditions and NAT topologies. Worked with the CEO of VectorUnit for RipTide
+        demo at Google I/O to showcase the platform.}
+        \resumeItem{Google Nearby Platform: Launched a realtime system called Google Nearby for auth and data transfer between Android/iOS phones in proximity. Uses multitude of sensors including Near-Ultrasound, Bluetooth and Wifi with an accuracy under 1 inch. Responsible for the stack on iOS and Android. Google Nearby grew from inception to 500M daily users.}
+        \resumeItem{Together Project: Formed a team under Marissa Mayer to build an Android app that can automatically determine if two people are in the same physical room, build applications on top of this layer.}
+      \resumeItemListEnd
+
+      \resumeItemListStart
+        \resumeItem{Wifi-based Location: Launched Wifi-based location services for 3+ Billion users on Android and Chrome from inception. Build Wifi-RF based location clustering algorithms, traffic prediction and business occupancy prediction algorithms. System self-learns using statistical machine learning algorithms and crowdsourced data.}
+        \resumeItem{Cell-based Location: Built cellular remap detection and localization technology, which powers Google's Mobile Maps software (1B+ downloads, most popular app on mobile).}
+        \resumeItem{System is now used on Android, WinMo and Blackberry phones. Also works on browsers using HTML 5 Geolocation API, such as on Mozilla's Firefox and Chrome browser, also launched with Google's Toolbar for Microsoft's Internet Explorer.}
+        \resumeItem{Algorithms serves over 3 Billion location computations per day on Android and powers Google's mobile Ads business unit. The success of the Wifi project helped grow the team to 70 Engineers (from 3).}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Notable Achievements}
+% Note: We need leftmargin to be 3.5em to align with the bullet points in the previous sections
+% Also the label is set to \tiny$\bullet$ to match the bullet points in the previous sections
+    \begin{itemize}[leftmargin=3.5em, itemsep=0pt, label=\tiny$\bullet$]
+     \resumeItem {Recipient of prestigious Google’s Founder award for innovation. Presidents Gold Medal at IIT.}
+     \resumeItem {52 awarded patents on algorithms, security, networking, machine learning and distributed systems. Best paper award at top ACM conferences.}
+     \resumeItem {From 0 to 1: Started 3 product teams at Google including p2p networking on Android/iOS, Google Play Games and led them to a Billion+ daily users.}
+     \resumeItem {NSF Research Grant for startup innovation. Best paper at ACM Mobicom, Infocom, MobiSys.}
+     \resumeItem {Creator of opensource implementation of IEEE 802.1X standard available at www.open1x.org. Distributed as part of all major linux distributions today.}
+     \resumeItem {Found vulnerabilities in IEEE 802.1X standard and proposed fixes that were incorporated into the standard. Paper downloaded 2 million+ times till date. Google Scholar h-index of 62}
+   \end{itemize}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \begin{itemize}
+    \item[] \textit{\small Ph.D. Systems Security, M.S. in Computer Security.}\hspace{2pt}{\small University of Maryland, College Park \vspace{-0.5em}}
+    \item[] \textit{\small B.Tech, Indian Institute of Technology.}\hspace{2pt}{\small Guwahati, India}
+  \end{itemize}
+
+\end{document}
+
