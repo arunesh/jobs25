@@ -35,11 +35,11 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
+\addtolength{\oddsidemargin}{-0.35in}
+\addtolength{\evensidemargin}{-0.35in}
+\addtolength{\textwidth}{0.9in}
 \addtolength{\topmargin}{-0.5in}
-\addtolength{\footskip}{-0.5in}  % shift footnotes up if needed
+\addtolength{\footskip}{-0.35in}  % shift footnotes up if needed
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -147,18 +147,17 @@
 
 
 
-%-----------EXPERIENCE-----------
-\section{Summary}
-Applied AI Engineer and Technical Leader with 10+ years of experience building production-grade machine learning systems and 4+ years leading development of agentic AI applications. Expert in LLM orchestration, multi-agent frameworks, RAG pipelines, and tool-augmented reasoning. Multiple patents in machine learning on production systems. Proven track record in shipping applied AI features to millions of users, defining technical strategy for autonomous AI systems, and mentoring teams of engineers and scientists to deliver business impact at scale.
+% --- Applied AI Summary ----
+\input{../common/applied_ai_summary}
 
 \section{Skills}
 \begin{itemize}[leftmargin=3.5em, itemsep=0pt, label=\tiny$\bullet$]
   \resumeItem {Agentic AI and LLM Systems: Agent frameworks, tool-use orchestration, planning, memory \& context management, RAG, evaluation.}
-  \resumeItem {ML \& NLP: Transformers, instruction tuning, reinforcement learning with human feedback (RLHF), multimodal models}
-  \resumeItem {Infra \& Engineering: Vector databases (Pinecone, FAISS), LangChain, LlamaIndex, Ray, Kubernetes, Docker, gRPC, REST}
-  \resumeItem {Languages: Kotlin, Swift, Go, Rust, Java, Python, C/C++} 
-  \resumeItem {Frameworks: Android/iOS SDKs, React, Node.js, Flask, JUnit, Material-UI, FastAPI}
-  \resumeItem {Developer Tools: Git, Docker, K8s, GCP/AWS/Azure, VS Code, PyCharm, IntelliJ, Eclipse, Vibe coding tools}
+  \resumeItem {ML \& NLP: Transformers, instruction tuning, reinforcement learning with human feedback (RLHF), multimodal models.}
+  \resumeItem {Infra \& Engineering: Vector databases (Pinecone, FAISS), LangChain, LlamaIndex, Ray, Kubernetes, Docker, gRPC, REST.}
+  \resumeItem {Languages: Kotlin, Swift, Go, Rust, Java, Python, C/C++.} 
+  \resumeItem {Frameworks: Android/iOS SDKs, React, Node.js, Flask, JUnit, Material-UI, FastAPI.}
+  \resumeItem {Developer Tools: Git, Docker, K8s, GCP/AWS/Azure, VS Code, PyCharm, IntelliJ, Eclipse, Vibe coding tools.}
 \end{itemize}
 
 \section{Experience}
@@ -169,7 +168,7 @@ Applied AI Engineer and Technical Leader with 10+ years of experience building p
       \resumeItemListStart
         \resumeItem{Codewalk Project: Agentic coding platform that constructs a knowledge base for deep code understanding and reasoning at the architectural level.}
         \resumeItem{VideoIndex Project: Agentic video understanding platform that allows information retrival from long videos, suitable for Question-answer style reasoning.}
-        \resumeItem{Talkbox Project: On-device privacy friendly system for Transformer model acceleration on Android and iOS. Deployed speech-to-text, translator, and text-to-speech models fine tuned for 37 foreign languages with 2500+ operators at US Coast Guard, US Army(xtech), state and federal teams. Additional features include document translation, question/answer and knowledge retrieval fully offline and on-device. Built custom fine-tuning pipeline and achieved SoTA on accuracy. Some opensourced https://huggingface.co/arun100 }
+        \resumeItem{Talkbox Project: On-device privacy friendly system for Transformer model acceleration on Android and iOS. Deployed speech-to-text, translator, and text-to-speech models fine tuned for 37 foreign languages with 2500+ operators at US Coast Guard, US Army(xtech), state and federal teams. Additional features include document translation, question/answer and knowledge retrieval fully offline and on-device. Built custom fine-tuning pipeline and achieved SoTA on accuracy. Some opensourced https://huggingface.co/arun100.}
         \resumeItem{Wave Project: Scalable end-end encrypted Virtual Reality and Video conferencing system. Funded by NSF through a highly competitive process. Launched with 250+ Edu.tech and federal customers during the Covid lockdowns.}
         \resumeItem{Semi-finalist at the Darpa AI Challenge: Picolo Labs was awarded semi-finalist at an AI Challenge for finding software vulnerabilities using Fuzzing and LLMs. Build a competitive solution that can identify CVEs in C/C++ and Java code automatically with a high success rate.}
         \resumeItem{Raised seed round from Menlo Ventures, Village Global (Eric Schmidt). Awarded Research grant by the National Science Foundation (NSF), matched by state government awards.}
@@ -179,7 +178,7 @@ Applied AI Engineer and Technical Leader with 10+ years of experience building p
       {Co-founder, CTO, Incept AI}{2017 - 2019}
       \resumeItemListStart
         \resumeItem{Chat-based AI assistant on Android to automatically take actions on the user's behalf. Actions derived from an AI model powered by a Ontological knowledge base over user action traces and intent.}
-        \resumeItem{Launched and grew the app to a total of 100K+ users}
+        \resumeItem{Launched and grew the app to a total of 100K+ users.}
       \resumeItemListEnd
 
     \resumeSubheadingOneLine
@@ -209,15 +208,16 @@ Applied AI Engineer and Technical Leader with 10+ years of experience building p
      \resumeItem {From 0 to 1: Started 3 product teams at Google including p2p networking on Android/iOS, Google Play Games and led them to a Billion+ daily users.}
      \resumeItem {NSF Research Grant for startup innovation. Best paper at ACM Mobicom, Infocom, MobiSys.}
      \resumeItem {Creator of opensource implementation of IEEE 802.1X standard available at www.open1x.org. Distributed as part of all major linux distributions today.}
-     \resumeItem {Found vulnerabilities in IEEE 802.1X standard and proposed fixes that were incorporated into the standard. Paper downloaded 2 million+ times till date. Google Scholar h-index of 62}
+     \resumeItem {Found vulnerabilities in IEEE 802.1X standard and proposed fixes that were incorporated into the standard. Paper downloaded 2 million+ times till date. Google Scholar h-index of 62.}
    \end{itemize}
 
+\input{../common/pubs}
 
 %-----------EDUCATION-----------
 \section{Education}
   \begin{itemize}
-    \item[] \textit{\small Ph.D. Systems Security, M.S. in Computer Security.}\hspace{2pt}{\small University of Maryland, College Park \vspace{-0.5em}}
-    \item[] \textit{\small B.Tech, Indian Institute of Technology.}\hspace{2pt}{\small Guwahati, India}
+    \item[] \textit{\small Ph.D. Systems Security, M.S. in Computer Security.}\hspace{2pt}{\small University of Maryland, College Park.\vspace{-0.5em}}
+    \item[] \textit{\small B.Tech, Indian Institute of Technology.}\hspace{2pt}{\small Guwahati, India.}
   \end{itemize}
 
 \end{document}
